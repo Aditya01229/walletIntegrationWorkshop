@@ -1,0 +1,15 @@
+
+contract Multiply {
+  int factor1;
+  int factor2;
+  int expectedProduct;
+  constructor(int f1, int f2) {
+    this.factor1 = f1;
+    this.factor2 = f2;
+    this.expectedProduct = f1 * f2;
+  }
+  public function multiply(int f1, int f2) {
+    int product = f1 * f2;
+    require(product == this.expectedProduct);
+  }
+}
